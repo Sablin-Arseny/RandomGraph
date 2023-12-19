@@ -167,7 +167,7 @@ WeightedGraph<int> Generator::generateWeighted() const {
         }
     }
     for (int i = 0; i < nodesAmount; ++i) {
-        graph.add(graphNodes[i]);
+        graph << graphNodes[i];
     }
 
     return graph;
@@ -210,7 +210,7 @@ Graph<int> Generator::generate() const {
         }
     }
     for (int i = 0; i < nodesAmount; ++i) {
-        graph.add(graphNodes[i]);
+        graph << graphNodes[i];
     }
 
     return graph;

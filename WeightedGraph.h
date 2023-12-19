@@ -24,6 +24,7 @@ public:
     std::size_t size() const;
 
     bool operator==(const WeightedGraph<K> &other) const;
+    bool operator<<(const WeightedGraphNode<K> &graphNode);
 
 
 private:
@@ -115,6 +116,11 @@ bool WeightedGraph<K>::operator==(const WeightedGraph<K> &other) const {
         }
     }
     return true;
+}
+
+template<typename K>
+bool WeightedGraph<K>::operator<<(const WeightedGraphNode<K> &graphNode) {
+    return add(graphNode);
 }
 
 

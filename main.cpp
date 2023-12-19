@@ -200,5 +200,7 @@ int main() {
 
     std::cout << "All tests are passed" << std::endl;
 
+    Graph<int> graph = generatorTest3.generate();
+
     return 0;
 }

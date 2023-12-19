@@ -22,6 +22,7 @@ public:
     std::size_t size() const;
 
     bool operator==(const Graph<K> &other) const;
+    bool operator<<(const GraphNode<K> &graphNode);
 
 
 private:
@@ -113,6 +114,11 @@ bool Graph<K>::operator==(const Graph<K> &other) const {
         }
     }
     return true;
+}
+
+template<typename K>
+bool Graph<K>::operator<<(const GraphNode<K> &graphNode) {
+    return add(graphNode);
 }
 
 #endif //RANDOMGRAPH_GRAPH_H
